@@ -3,11 +3,6 @@ import Navbar from "@/components/Navbar";
 import Sidenav from "@/components/Sidenav";
 const inter = Inter({ subsets: ["latin"] });
 
-
-
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
-}
 export const metadata = {
   title: "Dashboard",
 };

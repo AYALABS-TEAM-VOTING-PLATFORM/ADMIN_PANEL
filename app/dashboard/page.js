@@ -1,6 +1,6 @@
 
 import DoughnutChart from "@/components/DoughnutChart";
-// import Image from "next/image";
+import Image from "next/image";
 import { BiChevronDown } from "react-icons/bi";
 
 export default function Dashboard() {
