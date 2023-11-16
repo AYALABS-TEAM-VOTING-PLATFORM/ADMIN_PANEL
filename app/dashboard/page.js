@@ -1,9 +1,7 @@
-"use client";
 
-import { useState, useEffect } from "react";
 import DoughnutChart from "@/components/DoughnutChart";
-import Image from "next/image";
-import { BiChevronDown, BiFolder } from "react-icons/bi";
+// import Image from "next/image";
+import { BiChevronDown } from "react-icons/bi";
 
 export default function Dashboard() {
 
