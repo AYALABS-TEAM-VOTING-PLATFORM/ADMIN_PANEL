@@ -1,20 +1,25 @@
-import { AiFillHome } from "react-icons/ai";
+"use client";
+
+import React, { useState } from "react"
 import { IoIosNotifications } from "react-icons/io";
 import { BiChevronDown, BiMenu } from "react-icons/bi";
-import Image from "next/image";
+import AvatarModal from "./AvatarModal";
+import Avatar from "./Avatar";
 // import { ToggleButton } from "./Sidenav";
 
-const Navbar = ({ handleClick }) => {
+const Navbar = () => {
 
-  // const [toggle, setToggle] = useState(false)
+  const [avatarmodal, setAvatarModal] = useState(false);
+
+  const handleAvatarModal = () => {
+      setAvatarModal(!avatarmodal)
+  }
 
   return (
     <>
-      <div className="flex justify-between top-0 items-center w-full bg-white py-[13px] pr-[10px] pl-24 sm:ml-0 md:ml-0 sm:w-full md:w-full">
-        
-      {/* <button onClick={toggleSidebar}>Toggle Sidenav</button> */}
-      {/* <ToggleButton onClick={handleClick}>BB</ToggleButton> */}
-        <div className="sm:ml-[0px] md:ml-[0px]">
+      <div className="flex justify-between top-0 items-center w-full bg-white py-[13px] pr-[10px] pl-24 sm:pl-10 md:pl-10 sm:ml-0 md:ml-0 sm:w-full md:w-full">
+      
+        <div className="sm:ml-0 md:ml-0">
           <span>Dashboard</span>
         </div>
 
@@ -29,22 +34,10 @@ const Navbar = ({ handleClick }) => {
           <span>
             <IoIosNotifications color="#5570F1" size={25} />
           </span>
-
-          <Image
-            src="/profile.svg"
-            width={32}
-            height={32}
-            alt="profile image"
-            className="rounded-[8px]"
-          />
+          <Avatar width={32} height={32} onClick={handleAvatarModal}/>
 
           <div >
-          {/* className="2xl:hidden xl:hidden lg:hidden sm:block md:block" */}
-            {/* <button className="bg-[#5570F1] rounded-md py-2 px-2">
-                <BiMenu size={30} color="white"/>
-            </button> */}
-
-      
+            {avatarmodal && <AvatarModal /> }
           </div>
         </div>
       </div>

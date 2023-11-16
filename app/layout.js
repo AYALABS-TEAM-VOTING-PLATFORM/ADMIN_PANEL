@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             <div className="flex relative">
               <Sidenav />
             </div>
-            <div className="flex ml-[17%] w-full">
+            <div className="flex ml-[17%] sm:ml-0 md:ml-0 w-full">
               <div className="flex-1">
                 <Navbar />
                 <div className="px-8 py-6 h-[calc(100vh - 110px)]">{children}</div>
