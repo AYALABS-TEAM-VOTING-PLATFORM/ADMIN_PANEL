@@ -25,8 +25,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between top-0 items-center w-full bg-white py-[13px] pr-[10px] pl-24 sm:pl-10 md:pl-10 sm:ml-0 md:ml-0 sm:w-full md:w-full">
-      
+      <div className="top-0 w-full bg-white py-[13px] pr-[10px] pl-24 sm:pl-10 md:pl-10 sm:ml-0 md:ml-0 sm:w-full md:w-full">
+        <div className="flex justify-between items-center ">
+          
         <div className="sm:ml-0 md:ml-0">
           <span>Dashboard</span>
         </div>
@@ -64,6 +65,7 @@ const Navbar = () => {
                  <div className="absolute left-0 top-0">
                   {toggle && <MobileSidenav />}
                  </div>
+        </div>
         </div>
       </div>
     </>

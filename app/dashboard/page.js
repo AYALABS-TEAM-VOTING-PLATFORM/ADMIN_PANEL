@@ -6,11 +6,11 @@ import { BiChevronDown } from "react-icons/bi";
 export default function Dashboard() {
 
   return (
-    <div className="ml-42 pl-20 pr-[20px] mt-[20px] sm:ml-[0px] md:ml-[0px] sm:pl-7 md:pl-7">
+    <div className="ml-42 lg:ml-20 pl-20 pr-[20px] mt-[20px] sm:ml-[0px] md:ml-[0px] sm:pl-7 md:pl-7">
     
       {/* second */}
-      <div className="grid grid-cols-3 gap-3 mt-5 mb-5  sm:flex-col md:flex-col sm:flex md:flex">
-      <div className="bg-white rounded-md py-5 h-[70vh] px-5 sm:w-[100%] md:w-[100%]">
+      <div className="grid grid-cols-3 gap-3 mt-5 mb-8 lg:gap-8  sm:flex-col md:flex-col sm:flex md:flex">
+      <div className="bg-white rounded-md py-5 px-5 sm:w-[100%] md:w-[100%]">
           <div className="flex justify-between flex-wrap align-center mb-10 px-[15px] py-[15px]">
             <div className="">
             <span className="text-[#45464E]">Marketing</span>
