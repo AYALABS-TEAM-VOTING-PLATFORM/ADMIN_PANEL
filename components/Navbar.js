@@ -2,17 +2,25 @@
 
 import React, { useState } from "react"
 import { IoIosNotifications } from "react-icons/io";
-import { BiChevronDown, BiMenu } from "react-icons/bi";
+import { BiChevronDown, BiMenu, BiX } from "react-icons/bi";
 import AvatarModal from "./AvatarModal";
 import Avatar from "./Avatar";
+import MobileSidenav from "./MobileSidenav";
+
 // import { ToggleButton } from "./Sidenav";
 
 const Navbar = () => {
 
   const [avatarmodal, setAvatarModal] = useState(false);
+  const [toggle, setToggle] = useState(false)
+  
 
   const handleAvatarModal = () => {
       setAvatarModal(!avatarmodal)
+  }
+
+  const handleToggle = () => {
+    setToggle(!toggle)
   }
 
   return (
@@ -39,6 +47,23 @@ const Navbar = () => {
           <div >
             {avatarmodal && <AvatarModal /> }
           </div>
+
+          {/* lg:hidden xl:hidden 2xl:hidden */}
+              <div className=" cursor-pointer sm:block md:block">
+                <button onClick={handleToggle}>
+                      {
+                        toggle
+
+                        ?
+                        <BiX size={35} color="#121212"/>
+                        :
+                        <BiMenu size={35} color="#121212"/>
+                      }
+                  </button>
+              </div>
+                 <div className="absolute">
+                  {toggle && <MobileSidenav />}
+                 </div>
         </div>
       </div>
     </>

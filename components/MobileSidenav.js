@@ -6,7 +6,7 @@ import { HiOutlineUsers } from "react-icons/hi";
 import { TbLogout } from "react-icons/tb";
 import Link from "next/link";
 
-const Sidenav = () => {
+const MobileSidenav = () => {
     const [activeButton, setActiveButton] = useState("dashboard");
 
     const handleClick = (buttonType) => {
@@ -15,7 +15,7 @@ const Sidenav = () => {
 
     return (
         <>
-            <div className="fixed overflow:[hidden] top-0 z-50 bg-white w-[296px] pl-7 pb-20 h-full sm:hidden md:hidden xl:block">
+            <div className="fixed left-48 top-4 z-50 bg-white w-[296px] pl-7 pb-20 h-full sm:hidden md:hidden xl:block">
 
                 <div className="pl-10 pt-5 mb-10">
                     <h3 className="text-2xl font-semibold">Ayalabs</h3>
@@ -74,4 +74,4 @@ const Sidenav = () => {
     );
 };
 
-export default Sidenav;
+export default MobileSidenav;
