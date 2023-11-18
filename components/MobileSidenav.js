@@ -15,7 +15,7 @@ const MobileSidenav = () => {
 
     return (
         <>
-            <div className="fixed left-48 top-4 z-50 bg-white w-[296px] pl-7 pb-20 h-full sm:hidden md:hidden xl:block">
+            <div className="fixed z-50 bg-white w-[296px] pl-7 pb-20 h-full sm:block md:block lg:hidden 2xl:hidden xl:hidden">
 
                 <div className="pl-10 pt-5 mb-10">
                     <h3 className="text-2xl font-semibold">Ayalabs</h3>

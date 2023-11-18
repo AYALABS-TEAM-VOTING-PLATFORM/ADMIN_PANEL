@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
 
           {/* lg:hidden xl:hidden 2xl:hidden */}
-              <div className=" cursor-pointer sm:block md:block">
+              <div className="lg:hidden xl:hidden 2xl:hidden cursor-pointer sm:block md:block">
                 <button onClick={handleToggle}>
                       {
                         toggle
@@ -61,7 +61,7 @@ const Navbar = () => {
                       }
                   </button>
               </div>
-                 <div className="absolute">
+                 <div className="absolute left-0 top-0">
                   {toggle && <MobileSidenav />}
                  </div>
         </div>
