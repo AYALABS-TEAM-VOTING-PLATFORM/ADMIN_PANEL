@@ -5,6 +5,8 @@ import { BiCategoryAlt, BiSelection } from "react-icons/bi";
 import { HiOutlineUsers } from "react-icons/hi";
 import { TbLogout } from "react-icons/tb";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 const Sidenav = () => {
     const [activeButton, setActiveButton] = useState("dashboard");
@@ -12,6 +14,8 @@ const Sidenav = () => {
     const handleClick = (buttonType) => {
         setActiveButton(buttonType);
     };
+
+    const path = usePathname();
 
     return (
         <>
@@ -36,7 +40,7 @@ const Sidenav = () => {
 
                     {/* Add Election */}
                     <div className="pl-10 pt-5">
-                        <Link href="/addelection" onClick={() => handleClick("addelection")}>
+                        <Link href={`/${path.split("/")[1]}/addelection`} onClick={() => handleClick("addelection")}>
                             <button className={`pr-20 pt-4 pb-4 pl-4 rounded-md ${activeButton === "addelection" ? 'bg-[#5570F1] text-white' : ''}`}>
                                 <span className="flex items-center">
                                     <BiSelection size={25} />
@@ -48,7 +52,7 @@ const Sidenav = () => {
 
                     {/* Add Candidate */}
                     <div className="pl-10 pt-5">
-                        <Link href="/addcandidate" onClick={() => handleClick("addcandidate")}>
+                        <Link href={`/${path.split("/")[1]}/addcandidate`} onClick={() => handleClick("addcandidate")}>
                             <button className={`pr-20 pt-4 pb-4 pl-4 rounded-md ${activeButton === "addcandidate" ? 'bg-[#5570F1] text-white' : ''}`}>
                                 <span className="flex items-center">
                                     <HiOutlineUsers size={25} />
