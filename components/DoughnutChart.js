@@ -12,10 +12,10 @@ Chart.register(
   CategoryScale,
   Tooltip
 );
-const DoughnutChart = () => {
 
+const DoughnutChart = () => {
   const data = {
-    labels: ["Acquisition", "Rentention", "Purchase"],
+    labels: ["Acquisition", "Retention", "Purchase"],
     datasets: [
       {
         data: [200, 150, 50],
@@ -26,8 +26,7 @@ const DoughnutChart = () => {
   };
 
   return (
-    <div>
-       
+    <div className="w-full md:w-3/4 sm:w-1/2 md:w-1/3 mx-auto sm:w-full">
       <Doughnut data={data} />
     </div>
   );
