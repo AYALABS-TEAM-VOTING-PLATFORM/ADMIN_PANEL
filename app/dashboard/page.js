@@ -6,7 +6,7 @@ import { BiChevronDown } from "react-icons/bi";
 export default function Dashboard() {
 
   return (
-    <div className="ml-42 lg:ml-20 pl-20 pr-[20px] mt-[20px] sm:ml-[0px] md:ml-[0px] sm:pl-7 md:pl-7">
+    <div className="lg:ml-20 pl-20 pr-[20px] mt-[20px] sm:ml-[0px] md:ml-[0px] sm:pl-7 md:pl-7">
     
       {/* second */}
       <div className="grid grid-cols-3 gap-3 mt-5 mb-8 lg:gap-8  sm:flex-col md:flex-col sm:flex md:flex">
