@@ -59,6 +59,18 @@ const Sidenav = () => {
                         </button>
                     </Link>
                 </div>
+
+                {/* View Candidate */}
+                <div className="pl-10 pt-5">
+                    <Link href="/Candidateprofile" onClick={() => setActiveButton("Candidateprofile")}>
+                        <button className={`pr-20 pt-4 pb-4 pl-4 rounded-md ${activeButton === "Candidateprofile" ? 'bg-[#5570F1] text-white' : ''}`}>
+                            <span className="flex items-center">
+                                <HiOutlineUsers size={25} />
+                                <span className="ml-2 text-xs">View Candidate</span>
+                            </span>
+                        </button>
+                    </Link>
+                </div>
             </div>
 
             <div className="pl-7 pt-5 mt-32">

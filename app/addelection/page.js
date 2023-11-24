@@ -3,7 +3,7 @@ import DoughnutChart from "@/components/DoughnutChart";
 import Image from "next/image";
 import { BiChevronDown } from "react-icons/bi";
 
-export default function Dashboard() {
+export default function AddElection() {
   return (
     <div className="ml-20 md:ml-20 mt-5 sm:ml-0 md:ml-0">
       <div className=" bg-white rounded-md py-5 w-full px-5 pt-10">
