@@ -1,14 +1,12 @@
-import Dashboard from "./dashboard/page"
-
+import Dashboard from "./dashboard/page";
 
 export default function Home() {
-  return(
+  return (
     <>
       <div>
-          <Dashboard />
-          {/* <h3 className="text-2xl font-semibold">Ayalabs</h3> */}
+        <Dashboard />
+        {/* <h3 className="text-2xl font-semibold">Ayalabs</h3> */}
       </div>
     </>
-  )
-
+  );
 }
