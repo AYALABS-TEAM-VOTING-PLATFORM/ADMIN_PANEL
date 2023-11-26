@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@web3uikit/core": "^1.1.5",
+    "@web3uikit/icons": "^1.1.2",
+    "@web3uikit/web3": "^0.3.2",
+    "axios": "^1.6.2",
     "chart.js": "^4.4.0",
+    "ethers": "^6.8.1",
     "next": "^14.0.2",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
+    "react-datetime": "^3.2.0",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
-    "react-spinners": "^0.13.8"
+    "react-moralis": "^1.4.2",
+    "react-spinners": "^0.13.8",
+    "web3uikit": "^1.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

@@ -2,21 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-background-color: #F4F5FA;
+  background-color: #f4f5fa;
 }
 
 .sidebar {
-    position: sticky;
-    top: 0px; /* Adjust this value to set the distance from the top */
-    z-index: 1;
-  }
-  
+  position: sticky;
+  top: 0px; /* Adjust this value to set the distance from the top */
+  z-index: 1;
+}
+
 .side-content {
-    transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .settings-expanded {
-    width: 10px; /* Adjust the width as needed */
+  width: 10px; /* Adjust the width as needed */
+}
+
+.pop-up {
+  position: absolute;
+  background-color: white;
+  height: 200px;
+  width: 30%;
+  z-index: 2222;
+  border: 1px solid blue;
+  top: 50%; /* Move the element down by 50% of the parent's height */
+  left: 50%; /* Move the element right by 50% of the parent's width */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pop-up input {
+  margin-bottom: 10px;
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
 }

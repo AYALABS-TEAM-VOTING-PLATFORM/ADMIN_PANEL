@@ -1,11 +1,11 @@
+"use client";
+
 import React from "react";
 import DoughnutChart from "@/components/DoughnutChart";
 import Image from "next/image";
 import { BiChevronDown } from "react-icons/bi";
 
 export default function Dashboard() {
-
-
   return (
     <div className="lg:ml-20 pl-20 pr-[20px] mt-[20px] sm:ml-[0px] md:ml-[0px] sm:pl-7 md:pl-7">
       {/* second */}
@@ -25,9 +25,16 @@ export default function Dashboard() {
           </div>
 
           <div className="flex justify-around flex-wrap align-center mb-5">
-            <div className="flex"><span className="bg-[#5570F1] w-[10%] h-[10px]"></span> Acquisition</div>
-            <div className="flex"><span className="bg-[#5570F1]"></span> Retention</div>
-            <div className="flex"><span className="bg-[#5570F1]"></span> Purchase</div>
+            <div className="flex">
+              <span className="bg-[#5570F1] w-[10%] h-[10px]"></span>{" "}
+              Acquisition
+            </div>
+            <div className="flex">
+              <span className="bg-[#5570F1]"></span> Retention
+            </div>
+            <div className="flex">
+              <span className="bg-[#5570F1]"></span> Purchase
+            </div>
           </div>
 
           <DoughnutChart />
@@ -36,7 +43,12 @@ export default function Dashboard() {
         <div className="mb-5 bg-[#5570F1] rounded-md py-5 px-5 sm:w-full md:w-full lg:w-[33%]">
           <div className="flex justify-between mb-10 px-[15px] py-[15px]">
             <div className="bg-[#F4F5FA] rounded-[8px] py-2 px-2">
-              <Image src="/folder.svg" width={25} height={25} alt="graph_image" />
+              <Image
+                src="/folder.svg"
+                width={25}
+                height={25}
+                alt="graph_image"
+              />
             </div>
           </div>
 
