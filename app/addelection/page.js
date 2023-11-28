@@ -14,11 +14,13 @@ export default function AddElection() {
     _electionId: "",
     _startDate: null,
     _endDate: null,
+    about: "",
   });
   const [loading, setLoading] = useState();
 
   const _addElection = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const _startTime = Math.floor(new Date(formData._startDate) / 1000);
     const _endTime = Math.floor(new Date(formData._endDate).getTime() / 1000);
 
@@ -31,6 +33,7 @@ export default function AddElection() {
     });
     setLoading(false);
   };
+
   return (
     <div className="ml-20 md:ml-20 mt-5 sm:ml-0 md:ml-0">
       <div className=" bg-white rounded-md py-5 w-full px-5 pt-10">
@@ -75,6 +78,19 @@ export default function AddElection() {
               }
               value={formData._electionId}
               placeholder="Enter Election ID"
+              className="text-[#121212] px-3 py-2 border-2"
+            />
+            <input
+              type="text"
+              name="about"
+              onChange={(e) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  about: e.target.value,
+                }))
+              }
+              value={formData.about}
+              placeholder="Enter About The Election"
               className="text-[#121212] px-3 py-2 border-2"
             />
           </div>

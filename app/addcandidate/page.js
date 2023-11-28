@@ -39,8 +39,7 @@ export default function AddCandidate() {
       {candidates.length == 0 ? (
         <h1>No Candidates</h1>
       ) : (
-        candidates.map((val) => {
-          console.log(val["0"], Object.values(val));
+        candidates?.map((val) => {
           return (
             <Candidate
               image={val["1"]}
@@ -48,6 +47,8 @@ export default function AddCandidate() {
               candidateId={val["6"].toString()}
               setCandidateData={setCandidateData}
               setShow={setShow}
+              name={val["0"]}
+              loading={loading}
             />
           );
         })
@@ -99,6 +100,8 @@ const Candidate = ({
   candidateId,
   setCandidateData,
   setShow,
+  name,
+  loading,
 }) => {
   const [imageURIURL, setImageURI] = useState("");
 
@@ -123,7 +126,7 @@ const Candidate = ({
         <div className="flex justify-between">
           <div className="flex items-center gap-10">
             <Image src={imageURIURL} width={50} height={50} alt="image" />
-            <span>Shake Spell</span>
+            <span>{name}</span>
           </div>
           <button
             className="pr-6 pt-4 pb-4 pl-4 rounded-md bg-[#5570F1] text-white"
@@ -136,7 +139,7 @@ const Candidate = ({
               setShow(true);
             }}
           >
-            Add Candidate
+            {loading ? "Adding Candidate" : "Add Candidate"}
           </button>
         </div>
       </div>

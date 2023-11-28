@@ -26,11 +26,11 @@ export default function CreateCandidate() {
     e.preventDefault();
 
     const data = await pinFile({ ...formData, loading, setLoading });
-    console.log(data.result.IpfsHash);
+    console.log(data?.result?.IpfsHash);
 
     await _createCandidate({
       ...formData,
-      imageURI: data.result.IpfsHash,
+      imageURI: data?.result?.IpfsHash,
       loading,
       setLoading,
     });
@@ -80,7 +80,7 @@ export default function CreateCandidate() {
                 }))
               }
               value={formData.candidateId}
-              placeholder="Enter Election ID"
+              placeholder="Enter Candidate ID"
               className="text-[#121212] px-3 py-2 border-2"
             />
             <input
@@ -146,7 +146,7 @@ export default function CreateCandidate() {
             type="submit"
             className="w-full bg-[#5570F1] rounded-lg text-white p-2 px-4 font-semibold mt-5"
           >
-            {loading ? "Adding Election" : "Add ELection"}
+            {loading ? "Adding Candidate" : "Add Candidate"}
           </button>
         </form>
       </div>
