@@ -1,5 +1,5 @@
-export const governanceAddres = "0xbE3C7a06b89eD863Ef9d0Ac269E7DccDfA7c61f0";
+export const governanceAddres = "0x1bD57254CeC1B060b3Dd01BC73f590c099614Af8";
 export const governanceERC20Addres =
-  "0xBe346Da36235a1309D41810Af4822D25AaAC71fE";
+  "0xd0793B0E894a322e09b89E15052ac20FBA933727";
 export const PROVIDER =
   "https://eth-sepolia.g.alchemy.com/v2/ZkFgCAUBdigtKoqowEjqdlyfjchhbvmg";

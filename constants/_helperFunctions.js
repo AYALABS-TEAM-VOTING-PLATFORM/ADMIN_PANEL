@@ -3,7 +3,8 @@ import { PROVIDER, governanceAddres } from "./addresses";
 import governanceABI from "./GovernanceAbi.json";
 import axios from "axios";
 
-const API = `http://localhost:3001/api`;
+// const API = `http://localhost:3001/api`;
+const API = "https://voting-platform-server3.onrender.com/api";
 
 const _errorFunc = ({ error, message, setLoading, loading }) => {
   //   console.log(error);
@@ -273,6 +274,7 @@ export const _createElection = async ({
   setLoading,
   _startTime,
   _endTime,
+  about,
 }) => {
   try {
     console.log({ _startTime, _endTime });
@@ -282,7 +284,8 @@ export const _createElection = async ({
       _name,
       _electionId,
       _startTime,
-      _endTime
+      _endTime,
+      about
     );
     return true;
   } catch (error) {

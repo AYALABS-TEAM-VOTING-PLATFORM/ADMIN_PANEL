@@ -182,9 +182,9 @@
       },
       {
         "indexed": false,
-        "internalType": "uint32",
+        "internalType": "uint256",
         "name": "value",
-        "type": "uint32"
+        "type": "uint256"
       },
       {
         "indexed": false,
@@ -232,6 +232,29 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "year",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "electionId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "minter",
+        "type": "address"
+      }
+    ],
+    "name": "addMinterToElection",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "addVoter",
     "outputs": [],
@@ -274,6 +297,24 @@
         "type": "string"
       },
       {
+        "internalType": "uint256",
+        "name": "_electionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "changeHasMinted",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "year",
+        "type": "string"
+      },
+      {
         "internalType": "string",
         "name": "_name",
         "type": "string"
@@ -292,6 +333,11 @@
         "internalType": "uint256",
         "name": "_endDate",
         "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "about",
+        "type": "string"
       }
     ],
     "name": "creatElection",
@@ -437,6 +483,16 @@
             "internalType": "uint256",
             "name": "ID",
             "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "about",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "year",
+            "type": "string"
           }
         ],
         "internalType": "struct Governance.Election[]",
@@ -594,6 +650,16 @@
             "internalType": "uint256",
             "name": "ID",
             "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "about",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "year",
+            "type": "string"
           }
         ],
         "internalType": "struct Governance.Election",
@@ -663,7 +729,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "addresToCheck",
+        "name": "_walletAddress",
         "type": "address"
       }
     ],
@@ -705,7 +771,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_voterAddress",
+        "name": "_addressToBeVerified",
         "type": "address"
       }
     ],
@@ -732,9 +798,9 @@
         "type": "address"
       },
       {
-        "internalType": "uint32",
+        "internalType": "uint256",
         "name": "value",
-        "type": "uint32"
+        "type": "uint256"
       },
       {
         "internalType": "uint256",
